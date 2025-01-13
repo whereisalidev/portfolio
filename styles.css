@@ -309,6 +309,10 @@ h3 {
 		border-radius:30px;
 		padding:30px;
 		display:flex;
+		transition: transform 0.3s ease;
+		&:hover{
+			transform: translateY(-5px);
+		}
 		@media(max-width:1024px){
 			flex-direction:column;
 		}
@@ -324,6 +328,11 @@ h3 {
 					padding:10px 20px;
 					border-radius:15px;
 					margin-bottom:10px;
+					transition: background-color 0.3s ease, color 0.3s ease;
+					&:hover{
+						background-color: black;
+						color: white;
+					}
 				}
 			}
 		}
