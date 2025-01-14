@@ -38,7 +38,7 @@ a {
 #typewriter {
     font-weight: bold;
     font-size: 1.2em;
-    color: #007acc; /* Adjust color to match your design */
+    color: var(--blue); /* Adjust color to match your design */
     border-right: 2px solid #007acc;
     display: inline-block;
     white-space: nowrap;
@@ -199,6 +199,8 @@ h1 {
 .hero {
 	display:flex;
 	@media (max-width:1024px){
+		justify-content: center;
+        align-items: center;
 		flex-direction:column;
 	}
 	.hero-blue {
@@ -311,6 +313,7 @@ h3 {
 		display:flex;
 		transition: transform 0.3s ease;
 		&:hover{
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 			transform: translateY(-5px);
 		}
 		@media(max-width:1024px){
@@ -345,7 +348,7 @@ h3 {
 	}
 }
 
-.work-experience {
+/* .work-experience {
 	.jobs {
 		display:flex;
 		gap:30px;
@@ -410,7 +413,7 @@ h3 {
 			}
 		}
 	}
-}
+} */
 
 .bento {
 	.bento-grid {
