@@ -199,8 +199,8 @@ h1 {
 .hero {
 	display:flex;
 	@media (max-width:1024px){
+		align-items: center;
 		justify-content: center;
-        align-items: center;
 		flex-direction:column;
 	}
 	.hero-blue {
