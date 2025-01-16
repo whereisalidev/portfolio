@@ -1,9 +1,9 @@
 const texts = ["Backend Developer", "Python Developer", "API Developer", "Django Developer"];
 let index = 0;
 let charIndex = 0;
-const typingSpeed = 100; // Adjust typing speed
-const erasingSpeed = 50; // Adjust erasing speed
-const delayBetweenTexts = 2000; // Delay before switching to next text
+const typingSpeed = 100; 
+const erasingSpeed = 50; 
+const delayBetweenTexts = 2000; 
 const typewriterElement = document.getElementById("typewriter");
 
 function type() {
