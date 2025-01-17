@@ -421,32 +421,62 @@ h3 {
 
 .bento {
 	.bento-grid {
-		display:grid;
-		grid-gap:30px;
+		display: flex;
+		grid-gap: 30px;
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: repeat(4, 1fr);
-		height:960px;
-		@media(max-width:1024px){
+		height: 753px;
+		@media (max-width: 1024px) {
 			grid-template-rows: repeat(8, 1fr);
 		}
-		@media(max-width:768px){
-			display:flex;
-			flex-direction:column;
-			gap:30px;
-			height:auto;
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			height: auto;
 		}
 		.bento-item {
-			padding:30px;
+			padding: 30px;
 			background-color: var(--base-100);
-			border-radius:15px;
-			position:relative;
-			overflow:hidden;
+			border-radius: 15px;
+			width: 60vh;
+			height: 60vh;
+			position: relative;
+			overflow: hidden;
+
+			/* Buttons Container */
+			.buttons {
+				position: absolute;
+				bottom: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				gap: 10px;
+				z-index: 2;
+			}
+
+			/* Button Styling */
+			.buttons button {
+				background-color: var(--base-800);
+				color: #fff;
+				border: none;
+				padding: 10px 20px;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 14px;
+				transition: background-color 0.3s ease;
+			}
+
+			.buttons button:hover {
+				background-color: var(--base-400);
+			}
+
 			img {
-				position:absolute;
-				top:0;
-				left:0;
-				height:100%;
-				object-fit:cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				object-fit: cover;
 				transition: ease 3s all;
 			}
 			&:hover {
@@ -454,54 +484,30 @@ h3 {
 					transform: scale(1.2);
 				}
 			}
-			@media(max-width:768px){
-				height:240px;
+			@media (max-width: 768px) {
+				height: 240px;
 			}
 			&:nth-child(1) {
 				grid-column: span 2;
 				grid-row: span 2;
-				@media(max-width:1024px){
+				@media (max-width: 1024px) {
 					grid-column: span 2;
 					grid-row: span 2;
 				}
 			}
 			&:nth-child(2) {
 				grid-column: span 2;
-				grid-row: span 1;
-				@media(max-width:1024px){
+				grid-row: span 2;
+				@media (max-width: 1024px) {
 					grid-column: span 3;
 					grid-row: span 2;
 				}
 			}
 			&:nth-child(3) {
-				grid-column: span 1;
-				grid-row: span 1;
-				@media(max-width:1024px){
-					grid-column: span 3;
-					grid-row: span 2;
-				}
-			}
-			&:nth-child(4) {
-				grid-column: span 1;
-				grid-row: span 1;
-				@media(max-width:1024px){
-					grid-column: span 2;
-					grid-row: span 4;
-				}
-			}
-			&:nth-child(5) {
 				grid-column: span 2;
-				grid-row: span 1;
-				@media(max-width:1024px){
+				grid-row: span 2;
+				@media (max-width: 1024px) {
 					grid-column: span 3;
-					grid-row: span 2;
-				}
-			}
-			&:nth-child(6) {
-				grid-column: span 5;
-				grid-row: span 3;
-				@media(max-width:1024px){
-					grid-column: span 5;
 					grid-row: span 2;
 				}
 			}

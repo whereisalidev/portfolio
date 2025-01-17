@@ -30,3 +30,10 @@ function erase() {
 document.addEventListener("DOMContentLoaded", () => {
     type();
 });
+
+document.querySelectorAll('.buttons button').forEach(button => {
+	button.addEventListener('click', () => {
+		const url = button.getAttribute('data-url');
+		window.open(url, '_blank');
+	});
+});
