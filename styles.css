@@ -478,6 +478,10 @@ h3 {
 				height: 100%;
 				object-fit: cover;
 				transition: ease 3s all;
+				@media (max-width: 1024px) {
+					max-width: 38vh;
+                    border-radius: 34px;
+				}
 			}
 			&:hover {
 				img {
@@ -493,6 +497,8 @@ h3 {
 				@media (max-width: 1024px) {
 					grid-column: span 2;
 					grid-row: span 2;
+					max-width: 38vh;
+                    border-radius: 34px;
 				}
 			}
 			&:nth-child(2) {
@@ -501,6 +507,8 @@ h3 {
 				@media (max-width: 1024px) {
 					grid-column: span 3;
 					grid-row: span 2;
+					max-width: 38vh;
+                    border-radius: 34px;
 				}
 			}
 			&:nth-child(3) {
@@ -509,6 +517,8 @@ h3 {
 				@media (max-width: 1024px) {
 					grid-column: span 3;
 					grid-row: span 2;
+					max-width: 38vh;
+                    border-radius: 34px;
 				}
 			}
 		}
